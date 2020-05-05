@@ -62,8 +62,6 @@ fn main() {
                         //if neighbor_count_check was hold
                         neighbor_count_check += 1;
                         *imgbuf.get_pixel_mut(p[1] as u32, p[0] as u32) = image::Rgb(curret_color);
-
-                        //P = color
                     }
                 }
                 if neighbor_count_check > 0 {
