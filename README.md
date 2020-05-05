@@ -1,6 +1,6 @@
 ## DBScan
 
-### desciption
+### description
 
 |argument index| description|
 |--------------|------------|
