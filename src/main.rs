@@ -5,13 +5,15 @@ use image::GenericImageView;
 use image::ImageBuffer;
 use rand::Rng;
 use std::cmp;
+use std::env;
 
 fn main() {
     let target = [0, 0, 0, 255];
     let background = [255, 255, 255, 255];
-    let distance = 1;
-    let min_ptx = 5;
-    let img = image::open("me.bmp").unwrap();
+    let args: Vec<String> = env::args().collect();
+    let distance: usize = args[1].parse().unwrap();
+    let min_ptx: usize = args[2].parse().unwrap();
+    let img = image::open(&args[3]).unwrap();
     let (width, height) = img.dimensions();
     let mut points = Vec::<Vec<bool>>::new();
     //turn image to vector
